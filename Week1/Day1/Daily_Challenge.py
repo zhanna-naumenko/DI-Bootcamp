@@ -17,5 +17,3 @@ for letter in range(1, len(my_str) + 1):
 my_list = list(my_str)
 random.shuffle(my_list)
 print(''.join(my_list))
-
-#have some comments
