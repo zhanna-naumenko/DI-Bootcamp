@@ -103,3 +103,39 @@ total_price = 10 + 2.5 * len(toppings)
 print(total_price)
 
 #Exercise 9
+person_name = input("Please enter the age of each person in the group by separating them with a space: ")
+list_of_ages = list(person_name.split(" "))
+total_sum = 0
+for num in list_of_ages:
+    if int(num) > 3 and int(num) < 12:
+        total_sum += 10
+    elif int(num) > 12:
+        total_sum += 15
+print(total_sum)
+#4
+teenagers = {"Mike": 20, "Bob": 12, "Elie": 18, "Zara": 17}
+
+list_permitted = []
+for name, age in teenagers.items():
+    teen_age = int(input(f"Please enter the age of {name}: "))
+    if not 16 <= teen_age <= 21:
+        list_permitted.append(name)
+print(list_permitted)
+
+#Exercise 10
+#1
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+while True:
+    for item in sandwich_orders:
+        if "Pastrami" in item:
+            sandwich_orders.remove(item)
+    break
+print(sandwich_orders)
+#2
+finished_sandwiches = []
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+    print(f"I made your {current_sandwich}")
+    finished_sandwiches.append(current_sandwich)
+
+print(f"Finished sandwiches: {finished_sandwiches}")
