@@ -138,4 +138,4 @@ while sandwich_orders:
     print(f"I made your {current_sandwich}")
     finished_sandwiches.append(current_sandwich)
 
-print(f"Finished sandwiches: {finished_sandwiches}")
+print(f"Finished sandwiches list: {finished_sandwiches}")
