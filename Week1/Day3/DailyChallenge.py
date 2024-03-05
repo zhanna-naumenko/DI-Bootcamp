@@ -1,4 +1,4 @@
-# from collections import Counter
+
 #Challenge 1
 user_word = input("Please enter a word: ")
 val_num = {}
