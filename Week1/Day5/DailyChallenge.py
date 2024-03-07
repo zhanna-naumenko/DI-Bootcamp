@@ -13,11 +13,12 @@ user_sentence = input("Please write your sentence: ")
 list_of_words_in_sentence = list(user_sentence.split(" "))
 print(list_of_words_in_sentence)
 
-def longest_word(list):
+def get_longest_word(list):
+    '''Gets the longest word from the list'''
     lengths = [len(item) for item in list]
     index_for_longest_word = lengths.index(max(lengths))
     word_with_max_letters = list[index_for_longest_word]
     print(word_with_max_letters)
 
 
-longest_word(list_of_words_in_sentence)
+get_longest_word(list_of_words_in_sentence)
