@@ -14,6 +14,12 @@ user_word = input("Please enter the word: ")
 
 list_word = list(user_word)
 print(list_word)
-result = []
-[result.append(letter) for letter in list_word if letter not in result]
-print("".join(result))
+result = ""
+prev_char = None
+for char in list_word:
+    if char != prev_char:
+        result += char
+    prev_char = char
+
+print(f"The word is: {result}")
+
