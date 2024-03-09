@@ -11,8 +11,6 @@ def display_board():
     row4 = "*  ---|---|---  *".format(board)
     row5 = "*   {} | {} | {}   *".format(board[6], board[7], board[8])
 
-
-    print()
     print("TIC TAC TOE")
     print(frame)
     print(row1)
@@ -22,11 +20,6 @@ def display_board():
     print(row5)
     print(frame)
     print()
-
-
-# display_board()
-
-#take player input
 
 def player_input(icon):
     '''Gets the inputs of the player and check where he wants to put his value'''
@@ -48,13 +41,13 @@ def player_input(icon):
     else:
         print("That space is already taken!")
 
-#check for win
+
 def check_win(icon):
     '''Checks the results for winning'''
     win_conditions = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # Rows
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # Columns
-        [0, 4, 8], [2, 4, 6]              # Diagonals
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
     ]
 
     for condition in win_conditions:
