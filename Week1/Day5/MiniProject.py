@@ -24,7 +24,7 @@ def display_board():
     print()
 
 
-display_board()
+# display_board()
 
 #take player input
 
@@ -87,6 +87,7 @@ while True:
         print("O wins! Congratulations!")
         break
     elif is_draw():
+        display_board()
         print("It's a draw!")
         break
 
