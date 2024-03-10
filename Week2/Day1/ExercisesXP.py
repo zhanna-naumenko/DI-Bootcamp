@@ -1,4 +1,4 @@
-#Exercise 1
+#Exercise1
 
 class Cat:
     def __init__(self, cat_name, cat_age):
