@@ -110,12 +110,13 @@ class Zoo:
             first_letter = animal[0].upper()
             if first_letter not in grouped_animals:
                 grouped_animals[first_letter] = []
-
             grouped_animals[first_letter].append(animal)
         return grouped_animals
 
     def get_groups(self):
-        for key, animals in grouped_animals.items():
+        groups = self.sort_animals()
+        groups_dict = {key+1: groups[animals] for key, animals in enumerate(groups)}
+        for key, animals in groups_dict.items():
             print(f"Animals of group {key}: {', '.join(animals)}")
 
 
@@ -124,7 +125,7 @@ market_zoo.animals = ["Elephant", "Lion"]
 print(f"The animals in Aqua Villa Zoo: {market_zoo.animals}")
 
 #added the new animals in the list of animals
-market_zoo.add_animal("Alligator", "Camel", "Kangaroo", "Baboo", "Bear")
+market_zoo.add_animal("Alligator", "Camel", "Kangaroo", "Baboon", "Bear")
 print(f"The Aqua Villa Zoo gets more animals: {market_zoo.animals}")
 
 #get an animals one by one
