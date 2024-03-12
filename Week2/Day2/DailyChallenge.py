@@ -2,7 +2,7 @@ class Pagination:
     def __init__(self, items=None, pageSize=10):
         self.items = items or []
         self.pageSize = int(pageSize)
-        self.totalPages = max(1, len(self.items) // self.pageSize + (len(self.items) % self.pageSize > 0))
+        self.totalPages = len(self.items) // self.pageSize + 1
         self.currentPage = 1
 
     def getVisibleItems(self):
@@ -42,5 +42,5 @@ print(p.getVisibleItems())
 p.lastPage()
 print(p.getVisibleItems())
 
-p.goToPage(10)
+p.goToPage(3)
 print(p.getVisibleItems())

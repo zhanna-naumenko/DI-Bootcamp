@@ -73,7 +73,9 @@ class Family:
         for member in self.members:
             if member["name"] == name and member["age"] >= 18:
                 return True
-        return False
+            # else:
+            #     raise ValueError("There is no such name in the list.")
+        return None
     def family_presentation(self):
         for member in self.members:
             print(member["name"], member["age"], member["gender"], member["is_child"])
@@ -105,22 +107,22 @@ class TheIncredibles(Family):
 if __name__ == '__main__':
     # Exercise 1 outputs
 
-    cat1 = Bengal("Toto", 5)
-    cat2 = Chartreux("Muchu", 7)
-    cat3 = Siamese("Mimi", 10)
-    all_cats = [cat1, cat2, cat3]
-    sara_pets = Pets(all_cats)
-    sara_pets.walk()
+    # cat1 = Bengal("Toto", 5)
+    # cat2 = Chartreux("Muchu", 7)
+    # cat3 = Siamese("Mimi", 10)
+    # all_cats = [cat1, cat2, cat3]
+    # sara_pets = Pets(all_cats)
+    # sara_pets.walk()
 
 
     # Exercise 2 outputs
-    dog1 = Dog("Puppy", 12, 23)
-    dog2 = Dog("Fluffy", 7, 15)
-    dog3 = Dog("Rex", 6, 35)
-    print(dog1.run_speed())
-    dog2.bark()
-    dog3.fight(dog1)
-    dog2.fight(dog3)
+    # dog1 = Dog("Puppy", 12, 23)
+    # dog2 = Dog("Fluffy", 7, 15)
+    # dog3 = Dog("Rex", 6, 35)
+    # print(dog1.run_speed())
+    # dog2.bark()
+    # dog3.fight(dog1)
+    # dog2.fight(dog3)
 
 
     # Exercise 4 outputs
@@ -130,6 +132,7 @@ if __name__ == '__main__':
     user_family.born(name="Molly", age=3, gender="Female", is_child=True)
     print(user_family.members)
     print(user_family.is_18('John'))
+    print(user_family.is_18('Amy'))
     user_family.family_presentation()
 
 

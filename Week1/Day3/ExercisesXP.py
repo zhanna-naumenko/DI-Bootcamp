@@ -25,6 +25,7 @@ family_ages = input("Please enter ages of your family by separating it with a sp
 
 list_names = list(family_names.split(" "))
 list_ages = list(family_ages.split(" "))
+#The bonus task with user input is a creative step up. Just a tip: convert ages to integers once after input collection for efficiency.
 dict_family = dict(zip(list_names, list_ages))
 print(dict_family)
 total_price = 0
