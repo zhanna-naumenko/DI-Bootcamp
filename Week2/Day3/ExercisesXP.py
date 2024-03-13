@@ -38,11 +38,9 @@ class Currency:
         if isinstance(other, Currency):
             if self.currency == other.currency:
                 self.amount += other.amount
-                # return self
 
         elif isinstance(other, int):
             self.amount += other
-            # return self
 
         else:
             raise TypeError(f"Cannot add between Currency type {self.currency} and {other.currency}")
