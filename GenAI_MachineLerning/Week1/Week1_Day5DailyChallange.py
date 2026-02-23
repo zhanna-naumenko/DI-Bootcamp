@@ -9,24 +9,24 @@ print(my_list)
 
 # Exercise 2 Write a script that counts the number of spaces in a string.
 
-# user_text = input("Please enter your text: ")
-# num_of_spaces = user_text.count(" ")
-# print(num_of_spaces)
+user_text = input("Please enter your text: ")
+num_of_spaces = user_text.count(" ")
+print(num_of_spaces)
 
 # Exercise 3 Write a script that calculates the number of upper case letters and lower case letters in a string.
 
-# user_string2 = input("Please enter your text: ")
-# upper_letters = string.ascii_uppercase
-# lower_letters = string.ascii_lowercase
-# num_of_upper = 0
-# num_of_lower = 0
-# for letter in user_string2:
-#     if letter in upper_letters:
-#         num_of_upper += 1
-#     elif letter in lower_letters:
-#         num_of_lower += 1
-#
-# print(f"The number of uppercase letters is {num_of_upper}, and of the lowercase letters is {num_of_lower}")
+user_string2 = input("Please enter your text: ")
+upper_letters = string.ascii_uppercase
+lower_letters = string.ascii_lowercase
+num_of_upper = 0
+num_of_lower = 0
+for letter in user_string2:
+    if letter in upper_letters:
+        num_of_upper += 1
+    elif letter in lower_letters:
+        num_of_lower += 1
+
+print(f"The number of uppercase letters is {num_of_upper}, and of the lowercase letters is {num_of_lower}")
 
 # Exercise 4 Write a function to find the sum of an array without using the built in function
 def add(*args):
@@ -231,4 +231,5 @@ print(my_split("one;two;three;four", sep=";"))
 
 user_password = input("Please enter your password: ")
 new_password = "*" * len(user_password)
+
 print(new_password)
