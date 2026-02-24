@@ -60,5 +60,6 @@ print(big_list)
 
 
 # 11.Generate nested growing lists
-big_list = [[j for j in range(i + 1)] for i in range(10)]
+big_list = [[i for i in range(10)] for _ in range(10)]
 print(big_list)
+
