@@ -32,4 +32,3 @@ count_vowels_dict = {
 }
 
 print(count_vowels_dict)
-)
