@@ -1,80 +1,64 @@
 import string
 
-# Exercise : List #1
-# Write the following Python code to do the following (complete ALL of these using list comprehension).
-# Given a list [1,2,3,4], print out all the values in the list.
+# 1.Print all values
 first_list = [1, 2, 3, 4]
-for i in first_list:
-    print(i)
+[print(i) for i in first_list]
 
-# Given a list [1,2,3,4], print out all the values in the list multiplied by 20.
+
+# 2.Multiply values by 20
 second_list = [1, 2, 3, 4]
-for i in second_list:
-    print(i*20)
+[print(i * 20) for i in second_list]
 
-# Given a list [“Elie”, “Tim”, “Matt”], return a new list with only the first letter ([“E”, “T”, “M”]).
+
+# 3.First letters
 names_list = ["Elie", "Tim", "Matt"]
-new_list = []
-for i in names_list:
-    fist_letter = i[0]
-    new_list.append(fist_letter)
+new_list = [name[0] for name in names_list]
 print(new_list)
 
-# Given a list [1,2,3,4,5,6] return a new list of all the even values ([2,4,6]).
-third_list = [1,2,3,4,5,6]
-even_list = list(filter(lambda x: x % 2 == 0, third_list))
-even_list2 = []
-for i in even_list:
-    if i % 2 == 0:
-        even_list2.append(i)
+
+# 4.Even numbers (single solution)
+third_list = [1, 2, 3, 4, 5, 6]
+even_list = [num for num in third_list if num % 2 == 0]
 print(even_list)
-print(even_list2)
 
-# Given two lists [1,2,3,4] and [3,4,5,6], return a new list that is the intersection of the two ([3,4]).
-list1 = [1,2,3,4]
-list2 = [3,4,5,6]
-new_list = list(set(list1) & set(list2))
-print(new_list)
 
-# Given a list of words [“Elie”, “Tim”, “Matt”] return a new list with each word reversed and in lower case ([‘eile’, ‘mit’, ‘ttam’]).
+# 5.Intersection of two lists
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+intersection = [num for num in list1 if num in list2]
+print(intersection)
+
+
+# 6.Reverse words + lowercase
 name_list = ["Elie", "Tim", "Matt"]
-new_name_list = []
-for i in name_list:
-    new_name_list.append(i.lower()[::-1])
+new_name_list = [name.lower()[::-1] for name in name_list]
 print(new_name_list)
 
-# Given two strings “first” and “third”, return a new string with all the letters present in both words ([“i”, “r”, “t”]).
+
+# 7.Common letters between two strings
 first_string = "first"
 second_string = "third"
-new_list_letters = list(set(first_string) & set(second_string))
-print(new_list_letters)
+common_letters = [letter for letter in first_string if letter in second_string]
+print(common_letters)
 
-# For all the numbers between 1 and 100, return a list with all the numbers that are divisible by 12 ([12, 24, 36, 48, 60, 72, 84, 96]).
-list_div = []
-for i in range(1, 101):
-    if i % 12 == 0:
-        list_div.append(i)
+
+# 8.Numbers divisible by 12
+list_div = [num for num in range(1, 101) if num % 12 == 0]
 print(list_div)
-# Given the string “amazing”, return a list with all the vowels removed ([‘m’, ‘z’, ‘n’, ‘g’]).
+
+
+# 9.Remove vowels
 vowels = 'aeiouAEIOU'
 my_str = "amazing"
-list_consonants = []
-for i in my_str:
-    if i not in vowels:
-        list_consonants.append(i)
+list_consonants = [char for char in my_str if char not in vowels]
 print(list_consonants)
 
-# Generate a list with the value [[0, 1, 2], [0, 1, 2], [0, 1, 2]].
-small_list = []
-big_list = []
-for i in range(0, 3):
-    small_list.append(i)
-    big_list.append(small_list)
+
+# 10.Generate [[0,1,2],[0,1,2],[0,1,2]]
+big_list = [[i for i in range(3)] for _ in range(3)]
 print(big_list)
-# Generate a list with the value:
-small_list = []
-big_list = []
-for i in range(0, 10):
-    small_list.append(i)
-    big_list.append(small_list)
+
+
+# 11.Generate nested growing lists
+big_list = [[j for j in range(i + 1)] for i in range(10)]
 print(big_list)
