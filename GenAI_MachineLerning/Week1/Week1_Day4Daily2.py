@@ -9,20 +9,28 @@ sM#
 $a 
 #t%
 '''
-
-# Convert to matrix
+# Step 1: convert to 2D list
 matrix = [list(row) for row in MATRIX_STR.strip().split('\n')]
 
-sentence = ''
+rows = len(matrix)
+cols = len(matrix[0])
 
-# Read column by column
-for col in range(len(matrix[0])):
-    for row in range(len(matrix)):
+result = []
 
-        char = matrix[row][col]
+# Step 2–3: read column by column + keep only letters/spaces
+for c in range(cols):
+    for r in range(rows):
+        char = matrix[r][c]
+        
+        if char.isalpha():
+            result.append(char)
+        else:
+            result.append(' ')   # replace symbols with space
 
-        # Keep only letters and spaces
-        if char.isalpha() or char == ' ':
-            sentence += char
+# Step 4: join and clean extra spaces
+decoded = ''.join(result)
 
-print(sentence)
+# collapse multiple spaces into single space
+final_message = ' '.join(decoded.split())
+
+print(final_message)
